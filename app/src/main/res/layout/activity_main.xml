@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/answer"
+        style="@style/DefaultButtonStyle.Answer"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/key_menu"
+
+        >
+    </TextView>
+
+    <Button
+        android:theme="@style/LightTheme"
+        android:id="@+id/key_menu"
+        android:text="@string/key_menu"
+        style="@style/DefaultButtonStyle.Action"
+        app:layout_constraintTop_toBottomOf="@id/answer"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/key_clear"
+        app:layout_constraintBottom_toTopOf="@id/key_7"
+        >
+    </Button>
+
+    <Button
+        android:id="@+id/key_clear"
+        android:text="@string/key_clear"
+        style="@style/DefaultButtonStyle.Action"
+        app:layout_constraintTop_toBottomOf="@id/answer"
+        app:layout_constraintStart_toEndOf="@id/key_menu"
+        app:layout_constraintEnd_toStartOf="@id/key_percent"
+        app:layout_constraintBottom_toTopOf="@id/key_8"
+        >
+    </Button>
+
+    <Button
+        android:id="@+id/key_percent"
+        android:text="@string/key_percent"
+        style="@style/DefaultButtonStyle.Action"
+        app:layout_constraintTop_toBottomOf="@id/answer"
+        app:layout_constraintStart_toEndOf="@id/key_clear"
+        app:layout_constraintEnd_toStartOf="@id/key_dimention"
+        app:layout_constraintBottom_toTopOf="@id/key_9"
+        >
+    </Button>
+
+    <Button
+        android:id="@+id/key_dimention"
+        android:text="@string/key_dimention"
+        style="@style/DefaultButtonStyle.Action"
+        app:layout_constraintTop_toBottomOf="@id/answer"
+        app:layout_constraintStart_toEndOf="@id/key_percent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/key_multiplication"
+        >
+    </Button>
+
+    <Button
+        android:id="@+id/key_7"
+        android:text="@string/key_7"
+        style="@style/DefaultButtonStyle"
+        app:layout_constraintTop_toBottomOf="@id/key_menu"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/key_8"
+        app:layout_constraintBottom_toTopOf="@id/key_4"
+        >
+    </Button>
+
+    <Button
+        android:id="@+id/key_8"
+        android:text="@string/key_8"
+        style="@style/DefaultButtonStyle"
+        app:layout_constraintTop_toBottomOf="@id/key_clear"
+        app:layout_constraintStart_toEndOf="@id/key_7"
+        app:layout_constraintEnd_toStartOf="@id/key_9"
+        app:layout_constraintBottom_toTopOf="@id/key_5"
+        >
+    </Button>
+
+    <Button
+        android:id="@+id/key_9"
+        style="@style/DefaultButtonStyle"
+        android:text="@string/key_9"
+        app:layout_constraintBottom_toTopOf="@id/key_6"
+        app:layout_constraintEnd_toStartOf="@id/key_multiplication"
+        app:layout_constraintStart_toEndOf="@id/key_8"
+        app:layout_constraintTop_toBottomOf="@id/key_percent">
+    </Button>
+
+    <Button
+        android:id="@+id/key_multiplication"
+        android:text="@string/key_multiplication"
+        style="@style/DefaultButtonStyle.Action"
+        app:layout_constraintTop_toBottomOf="@id/key_dimention"
+        app:layout_constraintStart_toEndOf="@id/key_9"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/key_minus"
+        >
+    </Button>
+
+    <Button
+        android:id="@+id/key_4"
+        android:text="@string/key_4"
+        style="@style/DefaultButtonStyle"
+        app:layout_constraintTop_toBottomOf="@id/key_7"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/key_5"
+        app:layout_constraintBottom_toTopOf="@id/key_1"
+        >
+    </Button>
+
+    <Button
+        android:id="@+id/key_5"
+        android:text="@string/key_5"
+        style="@style/DefaultButtonStyle"
+        app:layout_constraintTop_toBottomOf="@id/key_8"
+        app:layout_constraintStart_toEndOf="@id/key_4"
+        app:layout_constraintEnd_toStartOf="@id/key_6"
+        app:layout_constraintBottom_toTopOf="@id/key_2"
+        >
+    </Button>
+
+    <Button
+        android:id="@+id/key_6"
+        android:text="@string/key_6"
+        style="@style/DefaultButtonStyle"
+        app:layout_constraintTop_toBottomOf="@id/key_9"
+        app:layout_constraintStart_toEndOf="@id/key_5"
+        app:layout_constraintEnd_toStartOf="@id/key_minus"
+        app:layout_constraintBottom_toTopOf="@id/key_3"
+        >
+    </Button>
+
+    <Button
+        android:id="@+id/key_minus"
+        android:text="@string/key_minus"
+        style="@style/DefaultButtonStyle.Action"
+        app:layout_constraintTop_toBottomOf="@id/key_multiplication"
+        app:layout_constraintStart_toEndOf="@id/key_6"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/key_plus"
+        >
+    </Button>
+
+    <Button
+        android:id="@+id/key_1"
+        android:text="@string/key_1"
+        style="@style/DefaultButtonStyle"
+        app:layout_constraintTop_toBottomOf="@id/key_4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/key_2"
+        app:layout_constraintBottom_toTopOf="@id/key_00"
+        >
+    </Button>
+
+    <Button
+        android:id="@+id/key_2"
+        android:text="@string/key_2"
+        style="@style/DefaultButtonStyle"
+        app:layout_constraintTop_toBottomOf="@id/key_5"
+        app:layout_constraintStart_toEndOf="@id/key_1"
+        app:layout_constraintEnd_toStartOf="@id/key_3"
+        app:layout_constraintBottom_toTopOf="@id/key_0"
+        >
+    </Button>
+
+    <Button
+        android:id="@+id/key_3"
+        android:text="@string/key_3"
+        style="@style/DefaultButtonStyle"
+        app:layout_constraintTop_toBottomOf="@id/key_6"
+        app:layout_constraintStart_toEndOf="@id/key_2"
+        app:layout_constraintEnd_toStartOf="@id/key_plus"
+        app:layout_constraintBottom_toTopOf="@id/key_dot"
+        >
+    </Button>
+
+    <Button
+        android:id="@+id/key_plus"
+        android:text="@string/key_plus"
+        style="@style/DefaultButtonStyle.Action"
+        app:layout_constraintTop_toBottomOf="@id/key_minus"
+        app:layout_constraintStart_toEndOf="@id/key_3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/key_equal"
+        >
+    </Button>
+
+
+    <Button
+        android:id="@+id/key_00"
+        android:text="@string/key_00"
+        style="@style/DefaultButtonStyle"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/key_0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/key_1"
+        >
+    </Button>
+
+    <Button
+        android:id="@+id/key_0"
+        android:text="@string/key_0"
+        style="@style/DefaultButtonStyle"
+        app:layout_constraintTop_toBottomOf="@id/key_2"
+        app:layout_constraintStart_toEndOf="@id/key_00"
+        app:layout_constraintEnd_toStartOf="@id/key_dot"
+        app:layout_constraintBottom_toBottomOf="parent"
+        >
+    </Button>
+
+    <Button
+        android:id="@+id/key_dot"
+        android:text="@string/key_dot"
+        style="@style/DefaultButtonStyle"
+        app:layout_constraintTop_toBottomOf="@id/key_3"
+        app:layout_constraintStart_toEndOf="@id/key_0"
+        app:layout_constraintEnd_toStartOf="@id/key_equal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        >
+    </Button>
+
+    <Button
+        android:id="@+id/key_equal"
+        android:text="@string/key_equal"
+        style="@style/DefaultButtonStyle.Action"
+        app:layout_constraintTop_toBottomOf="@id/key_plus"
+        app:layout_constraintStart_toEndOf="@id/key_dot"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        >
+    </Button>
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
