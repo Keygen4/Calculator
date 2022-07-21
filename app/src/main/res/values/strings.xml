@@ -20,4 +20,5 @@
     <string name="key_plus">+</string>
     <string name="key_equal">=</string>
     <string name="key_dot">,</string>
+    <string name="defaultAnswerValue">0.0</string>
 </resources>

@@ -2,7 +2,8 @@
 <resources>
     <dimen name="defaultButtonSize">0dp</dimen>
     <dimen name="defaultButtonWeights">1</dimen>
-    <dimen name="answerTextSize">35sp</dimen>
+    <dimen name="answerTextSize">55sp</dimen>
     <dimen name="buttonTextSize">25sp</dimen>
     <dimen name="answerVerticalWeight">4</dimen>
+    <dimen name="defaultMargin">16dp</dimen>
 </resources>

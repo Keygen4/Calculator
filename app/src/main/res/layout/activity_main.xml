@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:background="@color/answerBackground"
+    tools:context=".UI.MainActivity">
 
     <TextView
         android:id="@+id/answer"
@@ -13,14 +14,14 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toTopOf="@id/key_menu"
-
-        >
+        android:text="@string/defaultAnswerValue">
     </TextView>
 
     <Button
         android:theme="@style/LightTheme"
         android:id="@+id/key_menu"
         android:text="@string/key_menu"
+        android:onClick="clickAction"
         style="@style/DefaultButtonStyle.Action"
         app:layout_constraintTop_toBottomOf="@id/answer"
         app:layout_constraintStart_toStartOf="parent"
@@ -32,6 +33,7 @@
     <Button
         android:id="@+id/key_clear"
         android:text="@string/key_clear"
+        android:onClick="clickClear"
         style="@style/DefaultButtonStyle.Action"
         app:layout_constraintTop_toBottomOf="@id/answer"
         app:layout_constraintStart_toEndOf="@id/key_menu"
@@ -43,6 +45,7 @@
     <Button
         android:id="@+id/key_percent"
         android:text="@string/key_percent"
+        android:onClick="clickAction"
         style="@style/DefaultButtonStyle.Action"
         app:layout_constraintTop_toBottomOf="@id/answer"
         app:layout_constraintStart_toEndOf="@id/key_clear"
@@ -54,6 +57,7 @@
     <Button
         android:id="@+id/key_dimention"
         android:text="@string/key_dimention"
+        android:onClick="clickAction"
         style="@style/DefaultButtonStyle.Action"
         app:layout_constraintTop_toBottomOf="@id/answer"
         app:layout_constraintStart_toEndOf="@id/key_percent"
@@ -65,6 +69,7 @@
     <Button
         android:id="@+id/key_7"
         android:text="@string/key_7"
+        android:onClick="clickNumber"
         style="@style/DefaultButtonStyle"
         app:layout_constraintTop_toBottomOf="@id/key_menu"
         app:layout_constraintStart_toStartOf="parent"
@@ -77,6 +82,7 @@
         android:id="@+id/key_8"
         android:text="@string/key_8"
         style="@style/DefaultButtonStyle"
+        android:onClick="clickNumber"
         app:layout_constraintTop_toBottomOf="@id/key_clear"
         app:layout_constraintStart_toEndOf="@id/key_7"
         app:layout_constraintEnd_toStartOf="@id/key_9"
@@ -89,6 +95,7 @@
         style="@style/DefaultButtonStyle"
         android:text="@string/key_9"
         app:layout_constraintBottom_toTopOf="@id/key_6"
+        android:onClick="clickNumber"
         app:layout_constraintEnd_toStartOf="@id/key_multiplication"
         app:layout_constraintStart_toEndOf="@id/key_8"
         app:layout_constraintTop_toBottomOf="@id/key_percent">
@@ -97,6 +104,7 @@
     <Button
         android:id="@+id/key_multiplication"
         android:text="@string/key_multiplication"
+        android:onClick="clickAction"
         style="@style/DefaultButtonStyle.Action"
         app:layout_constraintTop_toBottomOf="@id/key_dimention"
         app:layout_constraintStart_toEndOf="@id/key_9"
@@ -109,6 +117,7 @@
         android:id="@+id/key_4"
         android:text="@string/key_4"
         style="@style/DefaultButtonStyle"
+        android:onClick="clickNumber"
         app:layout_constraintTop_toBottomOf="@id/key_7"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toStartOf="@id/key_5"
@@ -120,6 +129,7 @@
         android:id="@+id/key_5"
         android:text="@string/key_5"
         style="@style/DefaultButtonStyle"
+        android:onClick="clickNumber"
         app:layout_constraintTop_toBottomOf="@id/key_8"
         app:layout_constraintStart_toEndOf="@id/key_4"
         app:layout_constraintEnd_toStartOf="@id/key_6"
@@ -129,18 +139,19 @@
 
     <Button
         android:id="@+id/key_6"
-        android:text="@string/key_6"
         style="@style/DefaultButtonStyle"
-        app:layout_constraintTop_toBottomOf="@id/key_9"
-        app:layout_constraintStart_toEndOf="@id/key_5"
-        app:layout_constraintEnd_toStartOf="@id/key_minus"
+        android:onClick="clickNumber"
+        android:text="@string/key_6"
         app:layout_constraintBottom_toTopOf="@id/key_3"
-        >
+        app:layout_constraintEnd_toStartOf="@id/key_minus"
+        app:layout_constraintStart_toEndOf="@id/key_5"
+        app:layout_constraintTop_toBottomOf="@id/key_9">
     </Button>
 
     <Button
         android:id="@+id/key_minus"
         android:text="@string/key_minus"
+        android:onClick="clickAction"
         style="@style/DefaultButtonStyle.Action"
         app:layout_constraintTop_toBottomOf="@id/key_multiplication"
         app:layout_constraintStart_toEndOf="@id/key_6"
@@ -153,6 +164,7 @@
         android:id="@+id/key_1"
         android:text="@string/key_1"
         style="@style/DefaultButtonStyle"
+        android:onClick="clickNumber"
         app:layout_constraintTop_toBottomOf="@id/key_4"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toStartOf="@id/key_2"
@@ -164,6 +176,7 @@
         android:id="@+id/key_2"
         android:text="@string/key_2"
         style="@style/DefaultButtonStyle"
+        android:onClick="clickNumber"
         app:layout_constraintTop_toBottomOf="@id/key_5"
         app:layout_constraintStart_toEndOf="@id/key_1"
         app:layout_constraintEnd_toStartOf="@id/key_3"
@@ -175,6 +188,7 @@
         android:id="@+id/key_3"
         android:text="@string/key_3"
         style="@style/DefaultButtonStyle"
+        android:onClick="clickNumber"
         app:layout_constraintTop_toBottomOf="@id/key_6"
         app:layout_constraintStart_toEndOf="@id/key_2"
         app:layout_constraintEnd_toStartOf="@id/key_plus"
@@ -185,6 +199,7 @@
     <Button
         android:id="@+id/key_plus"
         android:text="@string/key_plus"
+        android:onClick="clickAction"
         style="@style/DefaultButtonStyle.Action"
         app:layout_constraintTop_toBottomOf="@id/key_minus"
         app:layout_constraintStart_toEndOf="@id/key_3"
@@ -198,6 +213,7 @@
         android:id="@+id/key_00"
         android:text="@string/key_00"
         style="@style/DefaultButtonStyle"
+        android:onClick="clickNumber"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@id/key_0"
         app:layout_constraintStart_toStartOf="parent"
@@ -209,6 +225,7 @@
         android:id="@+id/key_0"
         android:text="@string/key_0"
         style="@style/DefaultButtonStyle"
+        android:onClick="clickNumber"
         app:layout_constraintTop_toBottomOf="@id/key_2"
         app:layout_constraintStart_toEndOf="@id/key_00"
         app:layout_constraintEnd_toStartOf="@id/key_dot"
@@ -220,6 +237,7 @@
         android:id="@+id/key_dot"
         android:text="@string/key_dot"
         style="@style/DefaultButtonStyle"
+        android:onClick="clickNumber"
         app:layout_constraintTop_toBottomOf="@id/key_3"
         app:layout_constraintStart_toEndOf="@id/key_0"
         app:layout_constraintEnd_toStartOf="@id/key_equal"
@@ -229,6 +247,7 @@
 
     <Button
         android:id="@+id/key_equal"
+        android:onClick="clickEqual"
         android:text="@string/key_equal"
         style="@style/DefaultButtonStyle.Action"
         app:layout_constraintTop_toBottomOf="@id/key_plus"
