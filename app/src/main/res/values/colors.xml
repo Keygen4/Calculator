@@ -10,6 +10,6 @@
     <color name="baseButtonColor">#8A9AFFF3</color>
     <color name="darkButtonColor">#5C131313</color>
     <color name="actionButtonTextColor">#44d1d8</color>
-    <color name="answerBackground">#2DFFFFFF</color>
+    <color name="answerBackground">#FFFFFF</color>
     <color name="coal">#131313</color>
 </resources>
